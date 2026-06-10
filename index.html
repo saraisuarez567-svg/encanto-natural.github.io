@@ -12,23 +12,23 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
     background:#f8f8f8;
-    color:#333;
 }
 
 /* Barra de navegación */
 nav{
     background:#6b8e6b;
+    padding:15px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
-    position:sticky;
+    position:fixed;
+    width:100%;
     top:0;
-    z-index:1000;
 }
 
 .logo-nav{
@@ -38,8 +38,8 @@ nav{
 }
 
 nav ul{
-    list-style:none;
     display:flex;
+    list-style:none;
     gap:25px;
 }
 
@@ -49,44 +49,54 @@ nav a{
     font-weight:bold;
 }
 
-nav a:hover{
-    color:#dff0d8;
-}
-
-/* Encabezado */
-header{
+/* Inicio */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    background:white;
-    padding:40px 20px;
+    background:#f4f7f2;
+    padding:20px;
 }
 
-header img{
-    width:220px;
+.hero img{
+    width:250px;
     max-width:90%;
 }
 
-header h1{
+.hero h1{
     color:#6b8e6b;
-    margin-top:15px;
+    margin-top:20px;
+    font-size:50px;
 }
 
-header p{
-    font-size:18px;
+.hero p{
+    font-size:22px;
     color:#555;
+    margin-top:10px;
+}
+
+.boton{
+    margin-top:25px;
+    background:#6b8e6b;
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* Secciones */
 section{
+    padding:100px 10%;
     background:white;
-    margin:20px;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 section h2{
     color:#6b8e6b;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 .productos{
@@ -95,31 +105,29 @@ section h2{
     flex-wrap:wrap;
 }
 
-.producto{
+.card{
     flex:1;
-    min-width:250px;
-    background:#f5f5f5;
+    min-width:280px;
+    background:#f4f4f4;
     padding:20px;
     border-radius:10px;
 }
 
-/* WhatsApp */
 .whatsapp{
     display:inline-block;
+    margin-top:20px;
     background:#25D366;
     color:white;
-    padding:12px 20px;
-    text-decoration:none;
+    padding:15px 25px;
     border-radius:8px;
-    font-weight:bold;
+    text-decoration:none;
 }
 
 footer{
     text-align:center;
-    padding:20px;
     background:#6b8e6b;
     color:white;
-    margin-top:20px;
+    padding:20px;
 }
 </style>
 
@@ -133,9 +141,7 @@ footer{
 ```
 <ul>
     <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#quienes">Quiénes Somos</a></li>
-    <li><a href="#mision">Misión</a></li>
-    <li><a href="#vision">Visión</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#productos">Productos</a></li>
     <li><a href="#contacto">Contacto</a></li>
 </ul>
@@ -143,119 +149,85 @@ footer{
 
 </nav>
 
-<header id="inicio">
-    <img src="Captura de pantalla 2026-06-10 102848.png" alt="Logo Encanto Natural">
+<div class="hero" id="inicio">
 
 ```
+<img src="Captura de pantalla 2026-06-10 102848.png" alt="Logo">
+
 <h1>Encanto Natural</h1>
 
 <p>Lo natural que tu piel merece</p>
+
+<a href="#productos" class="boton">
+    Ver Productos
+</a>
 ```
 
-</header>
+</div>
 
-<section id="quienes">
-    <h2>Quiénes Somos</h2>
+<section id="nosotros">
 
-```
+<h2>Quiénes Somos</h2>
+
 <p>
-    Encanto Natural es un emprendimiento donde elaboramos jabones artesanales con ingredientes naturales.
-    Buscamos cuidar tu piel de forma suave y saludable, ofreciendo productos hechos con amor, calidad y respeto por lo natural.
+Encanto Natural es un emprendimiento donde elaboramos jabones artesanales con ingredientes naturales. Buscamos cuidar tu piel de forma suave y saludable, ofreciendo productos hechos con amor, calidad y respeto por lo natural.
 </p>
-```
 
-</section>
+<br><br>
 
-<section id="mision">
-    <h2>Misión</h2>
+<h2>Misión</h2>
 
-```
 <p>
-    Elaborar y ofrecer jabones artesanales hechos con ingredientes naturales y amigables con el medio ambiente,
-    brindando una experiencia de cuidado personal que nutra la piel de manera natural.
+Elaborar y ofrecer jabones artesanales hechos con ingredientes naturales y amigables con el medio ambiente.
 </p>
-```
 
-</section>
+<br><br>
 
-<section id="vision">
-    <h2>Visión</h2>
+<h2>Visión</h2>
 
-```
 <p>
-    Ser una marca reconocida por el cuidado personal natural, destacándose por la elaboración de jabones artesanales
-    que combinan tradición, ingredientes sostenibles y beneficios para la piel y el medio ambiente.
+Ser una marca reconocida por el cuidado personal natural y por la calidad de sus productos artesanales.
 </p>
-```
 
 </section>
 
 <section id="productos">
-    <h2>Nuestros Productos</h2>
 
-```
+<h2>Nuestros Productos</h2>
+
 <div class="productos">
 
-    <div class="producto">
-        <h3>🌾 Jabón de Arroz</h3>
+<div class="card">
+<h3>🌾 Jabón de Arroz</h3>
+<br>
+<p>Suaviza, hidrata y aporta frescura a la piel.</p>
+</div>
 
-        <p>
-            Elaborado con arroz natural, ayuda a suavizar e hidratar la piel, aportando frescura y una exfoliación suave.
-        </p>
-
-        <br>
-
-        <strong>Beneficios:</strong>
-        <ul>
-            <li>Hidrata la piel.</li>
-            <li>Suaviza y refresca.</li>
-            <li>Exfoliación suave.</li>
-            <li>Vitaminas y minerales naturales.</li>
-        </ul>
-    </div>
-
-    <div class="producto">
-        <h3>🌿 Jabón de Cúrcuma</h3>
-
-        <p>
-            Elaborado con cúrcuma natural, conocida por sus propiedades antioxidantes y calmantes para la piel.
-        </p>
-
-        <br>
-
-        <strong>Beneficios:</strong>
-        <ul>
-            <li>Ayuda a iluminar la piel.</li>
-            <li>Propiedades antioxidantes.</li>
-            <li>Efecto calmante.</li>
-            <li>Ideal para piel sensible.</li>
-        </ul>
-    </div>
+<div class="card">
+<h3>🌿 Jabón de Cúrcuma</h3>
+<br>
+<p>Ayuda a iluminar la piel y posee propiedades antioxidantes.</p>
+</div>
 
 </div>
-```
 
 </section>
 
 <section id="contacto">
-    <h2>Contacto</h2>
 
-```
+<h2>Contacto</h2>
+
 <p>Realiza tus pedidos por WhatsApp.</p>
 
-<br>
-
 <a class="whatsapp"
-   href="https://wa.me/573218132778"
-   target="_blank">
-   Contactar por WhatsApp
-</a>
-```
+href="https://wa.me/573218132778"
+target="_blank">
+Contactar por WhatsApp </a>
 
 </section>
 
 <footer>
-    © 2026 Encanto Natural - Lo natural que tu piel merece
+© 2026 Encanto Natural
 </footer>
 
 </body>
