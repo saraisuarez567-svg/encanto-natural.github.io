@@ -7,28 +7,75 @@
 <title>Encanto Natural</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     font-family: Arial, sans-serif;
-    margin:0;
+    display:flex;
     background:#f8f5f0;
+}
+
+nav{
+    width:250px;
+    background:#8fbf9f;
+    height:100vh;
+    position:fixed;
+    padding-top:30px;
+}
+
+nav h2{
+    color:white;
     text-align:center;
+    margin-bottom:20px;
+}
+
+nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+}
+
+nav a:hover{
+    background:#7ba98a;
+}
+
+main{
+    margin-left:250px;
+    width:100%;
 }
 
 header{
-    background:#8fbf9f;
-    color:white;
-    padding:30px;
+    text-align:center;
+    background:#dfe9df;
+    padding:40px;
+}
+
+header img{
+    width:220px;
+}
+
+header h1{
+    color:#5d6d5a;
+    margin-top:15px;
+}
+
+header h3{
+    color:#6b7b68;
 }
 
 section{
-    padding:30px;
+    padding:40px;
 }
 
 .producto{
     background:white;
-    margin:15px auto;
-    padding:15px;
-    width:80%;
+    padding:20px;
+    margin-top:20px;
     border-radius:10px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
@@ -36,62 +83,153 @@ section{
 footer{
     background:#8fbf9f;
     color:white;
-    padding:15px;
+    text-align:center;
+    padding:20px;
 }
 </style>
 
 </head>
 <body>
 
-<img src="Captura de pantalla 2026-06-10 102848.png" width="250" alt="Logo Encanto Natural">
+<nav>
+    <h2>Menú</h2>
 
-<header>
-    <h1>Encanto Natural</h1>
-    <h3>Lo natural que tu piel merece</h3>
+```
+<a href="#inicio">Inicio</a>
+<a href="#quienes">Quiénes Somos</a>
+<a href="#mision">Misión</a>
+<a href="#vision">Visión</a>
+<a href="#productos">Productos</a>
+<a href="#arroz">Arroz</a>
+<a href="#curcuma">Cúrcuma</a>
+<a href="#contacto">Contacto</a>
+```
+
+</nav>
+
+<main>
+
+<header id="inicio">
+    <img src="Captura de pantalla 2026-06-10 102848.png" alt="Logo Encanto Natural">
+
+```
+<h1>Encanto Natural</h1>
+<h3>Lo natural que tu piel merece</h3>
+```
+
 </header>
 
-<section>
-    <h2>Bienvenidos</h2>
+<section id="quienes">
+    <h2>¿Quiénes Somos?</h2>
+    <br>
     <p>
-        Elaboramos jabones artesanales con ingredientes naturales,
-        pensados para brindar una experiencia de cuidado personal suave y agradable.
+        Encanto Natural es un emprendimiento donde elaboramos
+        jabones artesanales con ingredientes naturales, buscando
+        cuidar tu piel de forma suave y saludable, ofreciendo
+        productos hechos con amor, calidad y respeto por lo natural.
     </p>
 </section>
 
-<section>
+<section id="mision">
+    <h2>Misión</h2>
+    <br>
+    <p>
+        Elaborar y ofrecer jabones artesanales hechos con
+        ingredientes naturales y amigables con el medio ambiente,
+        para que nuestros clientes disfruten una experiencia de
+        cuidado personal que nutra su piel de manera natural.
+    </p>
+</section>
+
+<section id="vision">
+    <h2>Visión</h2>
+    <br>
+    <p>
+        Ser una marca reconocida por el cuidado personal natural,
+        destacándose por la elaboración de jabones artesanales que
+        combinan tradición, ingredientes sostenibles y beneficios
+        para la piel y el medio ambiente.
+    </p>
+</section>
+
+<section id="productos">
     <h2>Nuestros Productos</h2>
 
 ```
 <div class="producto">
     <h3>🧼 Jabón de Arroz</h3>
-    <p>
-        Elaborado artesanalmente para brindar una limpieza suave y una sensación de frescura.
-    </p>
+    <p>Elaborado artesanalmente con ingredientes naturales.</p>
 </div>
 
 <div class="producto">
     <h3>🧼 Jabón de Cúrcuma</h3>
-    <p>
-        Elaborado con cúrcuma natural, ideal para complementar tu rutina de cuidado personal.
-    </p>
+    <p>Elaborado artesanalmente con cúrcuma natural.</p>
 </div>
 ```
 
 </section>
 
-<section>
+<section id="arroz">
+    <h2>¿Qué es el Arroz?</h2>
+    <br>
+
+```
+<p>
+    El arroz se produce sembrando semillas en la tierra o en
+    semilleros. Las plantas crecen con agua, nutrientes y luz
+    solar hasta que los granos maduran. Después se realiza la
+    cosecha, los granos se secan y pasan por un proceso donde
+    se les retira la cáscara para poder ser utilizados.
+</p>
+
+<br>
+
+<h3>Beneficios</h3>
+
+<ul>
+    <li>Ayuda a suavizar e hidratar la piel.</li>
+    <li>Aporta una exfoliación suave.</li>
+    <li>Contiene vitaminas y minerales beneficiosos.</li>
+    <li>Ayuda a mantener una sensación de frescura y suavidad.</li>
+</ul>
+```
+
+</section>
+
+<section id="curcuma">
+    <h2>¿Qué es la Cúrcuma?</h2>
+    <br>
+
+```
+<p>
+    La cúrcuma se produce sembrando rizomas en un suelo fértil
+    y húmedo. La planta crece durante varios meses con agua y
+    luz solar hasta que las hojas comienzan a secarse. Luego
+    las raíces se cosechan, se lavan, se hierven, se secan y
+    finalmente se muelen para obtener el polvo de cúrcuma.
+</p>
+
+<br>
+
+<h3>Beneficios</h3>
+
+<ul>
+    <li>Ayuda a proteger la piel gracias a sus propiedades antioxidantes.</li>
+    <li>Puede aportar luminosidad y ayudar a unificar el tono de la piel.</li>
+    <li>Tiene propiedades calmantes y antiinflamatorias.</li>
+    <li>Puede ser una opción suave para pieles sensibles.</li>
+</ul>
+```
+
+</section>
+
+<section id="contacto">
     <h2>Contáctanos</h2>
+    <br>
 
 ```
 <a href="https://wa.me/573218132778">
-    <button style="
-        background:#25D366;
-        color:white;
-        border:none;
-        padding:12px 25px;
-        border-radius:8px;
-        font-size:16px;
-        cursor:pointer;">
+    <button style="background:#25D366;color:white;padding:12px 25px;border:none;border-radius:8px;cursor:pointer;">
         📱 Escríbenos por WhatsApp
     </button>
 </a>
@@ -100,8 +238,10 @@ footer{
 </section>
 
 <footer>
-    <p>Encanto Natural © 2026</p>
+    Encanto Natural © 2026
 </footer>
+
+</main>
 
 </body>
 </html>
