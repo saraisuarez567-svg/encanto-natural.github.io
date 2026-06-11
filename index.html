@@ -1,102 +1,125 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Encanto Natural</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
     scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f8f8;
+    font-family:'Poppins', sans-serif;
+    background:#f8f8f5;
+    color:#333;
 }
 
 /* Barra de navegación */
+
 nav{
-    background:#6b8e6b;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#6f8f71;
     padding:15px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:fixed;
-    width:100%;
-    top:0;
+    z-index:1000;
 }
 
 .logo-nav{
     color:white;
-    font-size:22px;
     font-weight:bold;
+    font-size:22px;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:500;
 }
 
-/* Inicio */
+nav a:hover{
+    opacity:0.8;
+}
+
+/* Portada */
+
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:120px 20px 50px;
     background:#f4f7f2;
-    padding:20px;
 }
 
-.hero img{
-    width:250px;
-    max-width:90%;
+.logo{
+    width:220px;
 }
 
 .hero h1{
-    color:#6b8e6b;
+    font-family:'Playfair Display', serif;
+    color:#6f8f71;
+    font-size:70px;
     margin-top:20px;
-    font-size:50px;
 }
 
 .hero p{
-    font-size:22px;
-    color:#555;
+    font-size:24px;
+    color:#666;
+    font-style:italic;
     margin-top:10px;
 }
 
+.imagen-principal{
+    width:90%;
+    max-width:1000px;
+    margin-top:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
 .boton{
-    margin-top:25px;
-    background:#6b8e6b;
+    display:inline-block;
+    margin-top:30px;
+    background:#6f8f71;
     color:white;
-    padding:15px 25px;
-    border-radius:8px;
+    padding:15px 30px;
+    border-radius:10px;
     text-decoration:none;
     font-weight:bold;
 }
 
 /* Secciones */
+
 section{
-    padding:100px 10%;
+    padding:90px 10%;
     background:white;
 }
 
 section h2{
-    color:#6b8e6b;
+    color:#6f8f71;
     margin-bottom:20px;
+    font-family:'Playfair Display', serif;
 }
 
 .productos{
@@ -108,9 +131,15 @@ section h2{
 .card{
     flex:1;
     min-width:280px;
-    background:#f4f4f4;
-    padding:20px;
-    border-radius:10px;
+    background:#f4f7f2;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#6f8f71;
+    margin-bottom:10px;
 }
 
 .whatsapp{
@@ -118,50 +147,57 @@ section h2{
     margin-top:20px;
     background:#25D366;
     color:white;
-    padding:15px 25px;
-    border-radius:8px;
     text-decoration:none;
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 footer{
-    text-align:center;
-    background:#6b8e6b;
+    background:#6f8f71;
     color:white;
+    text-align:center;
     padding:20px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
 <nav>
-    <div class="logo-nav">🌿 Encanto Natural</div>
 
-```
+<div class="logo-nav">
+🌿 Encanto Natural
+</div>
+
 <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#productos">Productos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#contacto">Contacto</a></li>
 </ul>
-```
 
 </nav>
 
 <div class="hero" id="inicio">
 
-```
-<img src="Captura de pantalla 2026-06-10 102848.png" alt="Logo">
+<img src="Captura de pantalla 2026-06-10 102848.png"
+class="logo"
+alt="Logo Encanto Natural">
 
 <h1>Encanto Natural</h1>
 
 <p>Lo natural que tu piel merece</p>
 
+<img
+src="ChatGPT Image 11 jun 2026, 06_56_23 a.m..png"
+class="imagen-principal"
+alt="Jabones Encanto Natural">
+
 <a href="#productos" class="boton">
-    Ver Productos
+Ver Productos
 </a>
-```
 
 </div>
 
@@ -170,7 +206,7 @@ footer{
 <h2>Quiénes Somos</h2>
 
 <p>
-Encanto Natural es un emprendimiento donde elaboramos jabones artesanales con ingredientes naturales. Buscamos cuidar tu piel de forma suave y saludable, ofreciendo productos hechos con amor, calidad y respeto por lo natural.
+Encanto Natural es un emprendimiento dedicado a la elaboración de jabones artesanales con ingredientes naturales. Buscamos brindar productos de calidad que ayuden al cuidado de la piel de forma suave, saludable y respetuosa con el medio ambiente.
 </p>
 
 <br><br>
@@ -178,7 +214,7 @@ Encanto Natural es un emprendimiento donde elaboramos jabones artesanales con in
 <h2>Misión</h2>
 
 <p>
-Elaborar y ofrecer jabones artesanales hechos con ingredientes naturales y amigables con el medio ambiente.
+Elaborar y ofrecer jabones artesanales hechos con ingredientes naturales y amigables con el medio ambiente, permitiendo que nuestros clientes disfruten una experiencia de cuidado personal que nutra su piel de manera natural.
 </p>
 
 <br><br>
@@ -186,7 +222,7 @@ Elaborar y ofrecer jabones artesanales hechos con ingredientes naturales y amiga
 <h2>Visión</h2>
 
 <p>
-Ser una marca reconocida por el cuidado personal natural y por la calidad de sus productos artesanales.
+Ser una marca reconocida por el cuidado personal natural, destacándose por la elaboración de jabones artesanales que combinan tradición, ingredientes sostenibles y beneficios para la piel y el medio ambiente.
 </p>
 
 </section>
@@ -198,15 +234,23 @@ Ser una marca reconocida por el cuidado personal natural y por la calidad de sus
 <div class="productos">
 
 <div class="card">
+
 <h3>🌾 Jabón de Arroz</h3>
-<br>
-<p>Suaviza, hidrata y aporta frescura a la piel.</p>
+
+<p>
+Ayuda a suavizar e hidratar la piel, aporta una exfoliación suave y brinda una sensación de frescura gracias a sus vitaminas y minerales naturales.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>🌿 Jabón de Cúrcuma</h3>
-<br>
-<p>Ayuda a iluminar la piel y posee propiedades antioxidantes.</p>
+
+<p>
+Ayuda a proteger la piel gracias a sus propiedades antioxidantes, aporta luminosidad y posee propiedades calmantes ideales para el cuidado diario.
+</p>
+
 </div>
 
 </div>
@@ -217,17 +261,23 @@ Ser una marca reconocida por el cuidado personal natural y por la calidad de sus
 
 <h2>Contacto</h2>
 
-<p>Realiza tus pedidos por WhatsApp.</p>
+<p>
+Realiza tus pedidos por WhatsApp.
+</p>
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/573218132778"
 target="_blank">
-Contactar por WhatsApp </a>
+📱 Contactar por WhatsApp
+</a>
 
 </section>
 
 <footer>
-© 2026 Encanto Natural
+
+© 2026 Encanto Natural - Lo natural que tu piel merece
+
 </footer>
 
 </body>
