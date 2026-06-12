@@ -1,211 +1,284 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Encanto Natural</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f5ef;
-    color:#333;
+background:#f8f5ef;
+color:#333;
 }
 
 /* HEADER */
 
 header{
-    background:#fff;
-    padding:15px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-    position:sticky;
-    top:0;
-    z-index:1000;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .logo img{
-    width:55px;
+width:55px;
 }
 
 .logo h1{
-    color:#6f8b62;
-    font-size:1.5rem;
+font-size:1.5rem;
+color:#6f8b62;
+font-weight:600;
 }
 
 .menu-btn{
-    border:none;
-    background:none;
-    font-size:30px;
-    cursor:pointer;
-    color:#6f8b62;
+background:none;
+border:none;
+font-size:32px;
+cursor:pointer;
+color:#6f8b62;
 }
 
 nav{
-    display:none;
-    position:absolute;
-    top:80px;
-    right:20px;
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+display:none;
+position:absolute;
+top:80px;
+right:25px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 nav.active{
-    display:block;
+display:block;
 }
 
 nav ul{
-    list-style:none;
+list-style:none;
 }
 
 nav ul li a{
-    display:block;
-    padding:15px 25px;
-    text-decoration:none;
-    color:#333;
+display:block;
+padding:15px 25px;
+text-decoration:none;
+color:#333;
+transition:.3s;
 }
 
 nav ul li a:hover{
-    background:#f1f1f1;
+background:#f3f3f3;
 }
 
-/* INICIO */
+/* HERO */
 
 .hero{
-    text-align:center;
-    padding:80px 20px;
+padding:150px 8% 80px;
 }
 
-.hero img{
-    width:130px;
-    margin-bottom:20px;
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
 }
 
-.hero h2{
-    font-size:2.8rem;
-    color:#6f8b62;
+.hero-text{
+flex:1;
+min-width:300px;
 }
 
-.hero p{
-    margin-top:15px;
-    font-size:1.2rem;
+.hero-text h2{
+font-size:3rem;
+color:#6f8b62;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:1.1rem;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#6f8b62;
+color:white;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+min-width:300px;
+}
+
+.hero-image img{
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 /* PRODUCTOS */
 
 .productos{
-    padding:60px 20px;
+padding:80px 8%;
 }
 
 .productos h2{
-    text-align:center;
-    color:#6f8b62;
-    margin-bottom:40px;
+text-align:center;
+font-size:2.5rem;
+color:#6f8b62;
+margin-bottom:50px;
 }
 
-.contenedor-productos{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
+.productos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 
 .producto{
-    background:white;
-    width:320px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:0.3s;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
 }
 
 .producto:hover{
-    transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
 .producto img{
-    width:100%;
-    display:block;
+width:100%;
+height:350px;
+object-fit:cover;
 }
 
-.producto h3{
-    text-align:center;
-    color:#6f8b62;
-    margin:15px 0;
+.producto-info{
+padding:25px;
 }
 
-.producto p{
-    padding:0 15px 20px;
-    text-align:center;
+.producto-info h3{
+color:#6f8b62;
+margin-bottom:10px;
+}
+
+.producto-info p{
+line-height:1.7;
 }
 
 /* NOSOTROS */
 
 .nosotros{
-    background:white;
-    padding:60px 20px;
-    text-align:center;
+background:white;
+padding:80px 8%;
+text-align:center;
 }
 
 .nosotros h2{
-    color:#6f8b62;
-    margin-bottom:20px;
+font-size:2.5rem;
+color:#6f8b62;
+margin-bottom:20px;
+}
+
+.nosotros p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
 }
 
 /* CONTACTO */
 
 .contacto{
-    padding:60px 20px;
-    text-align:center;
+padding:80px 8%;
+text-align:center;
 }
 
 .contacto h2{
-    color:#6f8b62;
-    margin-bottom:20px;
+font-size:2.5rem;
+color:#6f8b62;
+margin-bottom:20px;
 }
 
 .btn-whatsapp{
-    display:inline-block;
-    margin-top:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
+display:inline-block;
+margin-top:20px;
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
 .btn-whatsapp:hover{
-    transform:scale(1.05);
+transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
-    background:#6f8b62;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+background:#6f8b62;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero-content{
+flex-direction:column;
+}
+
+.hero-text h2{
+font-size:2.2rem;
+}
+
 }
 
 </style>
@@ -217,7 +290,7 @@ footer{
 <header>
 
 <div class="logo">
-<img src="logo.png" alt="Encanto Natural">
+<img src="Captura de pantalla 2026-06-10 102848.png" alt="Logo">
 <h1>Encanto Natural</h1>
 </div>
 
@@ -234,66 +307,100 @@ footer{
 
 </header>
 
-<section class="hero" id="inicio">
+<section id="inicio" class="hero">
 
-<img src="logo.png" alt="Logo">
+<div class="hero-content">
 
-<h2>Encanto Natural</h2>
+<div class="hero-text">
 
-<p>Lo natural que tu piel merece.</p>
+<h2>Lo natural que tu piel merece</h2>
+
+<p>
+Descubre nuestros jabones artesanales elaborados con ingredientes naturales cuidadosamente seleccionados para brindar bienestar, frescura y cuidado a tu piel.
+</p>
+
+<a href="#productos" class="btn">Ver Productos</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="ChatGPT Image 11 jun 2026, 06_56_23 a.m..png" alt="Encanto Natural">
+
+</div>
+
+</div>
 
 </section>
 
-<section class="productos" id="productos">
+<section id="productos" class="productos">
 
 <h2>Nuestros Productos</h2>
 
-<div class="contenedor-productos">
+<div class="productos-grid">
 
 <div class="producto">
-<img src="arroz.jpeg" alt="Jabón de Arroz">
+
+<img src="WhatsApp Image 2026-06-11 at 10.59.37 PM.jpeg" alt="Jabón de Arroz">
+
+<div class="producto-info">
+
 <h3>Jabón de Arroz</h3>
+
 <p>
-Elaborado con ingredientes naturales que ayudan a suavizar e hidratar la piel.
+Ayuda a hidratar, suavizar y cuidar la piel gracias a sus propiedades naturales.
 </p>
+
+</div>
+
 </div>
 
 <div class="producto">
-<img src="curcuma.jpeg" alt="Jabón de Cúrcuma">
+
+<img src="WhatsApp Image 2026-06-11 at 10.59.44 PM.jpeg" alt="Jabón de Cúrcuma">
+
+<div class="producto-info">
+
 <h3>Jabón de Cúrcuma</h3>
+
 <p>
-Ayuda a revitalizar la piel gracias a las propiedades naturales de la cúrcuma.
+Ideal para revitalizar la piel y aportar luminosidad de manera natural.
 </p>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="nosotros" id="nosotros">
+<section id="nosotros" class="nosotros">
 
 <h2>Sobre Nosotros</h2>
 
 <p>
-En Encanto Natural elaboramos jabones artesanales inspirados en el poder de los ingredientes naturales, ofreciendo productos de calidad para el cuidado diario de la piel.
+En Encanto Natural elaboramos jabones artesanales inspirados en los beneficios de los ingredientes naturales. Nuestro compromiso es ofrecer productos de calidad que cuiden tu piel de forma saludable y responsable.
 </p>
 
 </section>
 
-<section class="contacto" id="contacto">
+<section id="contacto" class="contacto">
 
 <h2>Contáctanos</h2>
 
-<p>Haz tu pedido directamente por WhatsApp.</p>
+<p>Realiza tu pedido directamente por WhatsApp.</p>
 
-<a href="https://wa.me/573218132778" class="btn-whatsapp" target="_blank">
-📱 Comprar por WhatsApp
+<a href="https://wa.me/573218132778" target="_blank" class="btn-whatsapp">
+📱 Pedir por WhatsApp
 </a>
 
 </section>
 
 <footer>
+
 <p>© 2026 Encanto Natural | Todos los derechos reservados</p>
+
 </footer>
 
 <script>
